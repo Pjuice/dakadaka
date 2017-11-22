@@ -1,0 +1,122 @@
+/**index.wxss**/
+
+.userinfo {
+  width: 100%;
+  height: 380rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f;  
+   /* background-image: url('../../pic/pic.jpg');  */
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+
+  border-width:1px; 
+  border-color: #fff;
+  border-style: solid; 
+  border-radius: 50%;
+
+  background-color: #fff; 
+}
+ 
+ .userinfo-nickname {
+  color: #fff;
+}  
+
+.con {
+  display: flex;
+  flex-direction: column;/*主轴方向*/
+  justify-content: space-between; /*主轴上的对齐方式*/
+  align-items: center;  /*交叉轴对齐方式*/
+  /* background-color: #f00;    */
+  background-image: url('../../pic/pic.jpg');
+} 
+
+/* .card{
+  display: flex;
+  width: 95%;
+  height: 150rpx;
+  /* border: 1px solid #ddd; 
+
+  border-radius: 2%;
+  border-width: 1px;
+  border-color: #ddd;
+  border-style: solid;
+  
+  flex-direction: column;
+  justify-content: center; 
+  align-self: center;
+  background-color: #fff;
+} */
+ 
+.dakablock{
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left{
+  display: flex;
+  width: 100%;
+  flex-direction: column;/*主轴方向*/
+  justify-content: space-between; /*主轴上的对齐方式*/
+  align-items: flex-start;  /*交叉轴对齐方式*/
+}
+
+.BigCard{
+  display: flex;
+  width:100%;
+  height: 50%;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card{
+  display: flex;
+  flex-direction: row;
+  flex-basis: column;
+  width: 95%;
+  height: 150rpx;
+
+  border-radius: 2%;
+  border-width: 1px;
+  border-color: #ddd;
+  border-style: solid;
+  background-color: #fff; 
+
+  justify-content:space-around;
+  align-items: center;
+}
+ 
+.btn{
+  flex-direction: column;
+  align-self: center;
+} 
+.habitpic{
+  display: flex;
+  width: 140rpx;
+  /* height: 145rpx; */
+  height: 130rpx;
+  align-self: center;
+}
+.habitname{
+  /* width: 400rpx; */
+  display: flex;
+  font-style: normal;
+  background-color: #fff;
+  /* text-align: center; */
+}
+.timetext{
+  /* width: 400rpx; */
+  display: flex;
+  font-size: x-small;
+}
+.dkbutton{
+  display: flex;
+  background-color:#55f;
+  color: whitesmoke;
+}
