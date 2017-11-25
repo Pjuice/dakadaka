@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/me/me",
+    "pages/create_group/create_group",
+    "pages/layout/layout"
+    
+  ],
+
+   "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#20B2AA",
+    "borderStyle": "black",
+    "backgroundColor": "#white",
+    "position":"bottom",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "打卡",
+        "iconPath": "image/icon/index.png",
+        "selectedIconPath":"image/icon/index_selected.png"
+      }, {
+        "pagePath": "pages/layout/layout",
+        "text": "发现",
+        "iconPath": "image/icon/find.png",
+        "selectedIconPath": "image/icon/find_selected.png"
+      }, {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "image/icon/me.png",
+        "selectedIconPath": "image/icon/me_selected.png"
+      }]
+  },
+
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#20B2AA",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"white"
+  }
+  
+}
