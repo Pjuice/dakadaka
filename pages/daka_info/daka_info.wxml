@@ -1,0 +1,38 @@
+<!--pages/daka_info/daka_info.wxml-->
+<!-- <text>pages/daka_info/daka_info.wxml</text> -->
+<view class = 'page_'>
+    <view class='group' style="background-image:url('http://mpic.tiankong.com/3ef/629/3ef62948d42ead26ba10f4f6b21dea98/640.jpg');backgroud-repeat:round">  
+    <text>{{myGroup}}</text>
+    <text>{{continue_days}}人已参加 | {{continue_days}}次打卡</text>
+  </view>
+
+ 
+    <view>
+      <text>已打卡{{continue_days}}天</text>
+    </view>  
+    <progress percent="{{continue_days*100/5}}" stroke-width="10" show-info active />
+    <!-- 圆形按钮 -->
+    <!-- <view><button size='mini' type="default" plain='True'> 打卡 </button></view> -->
+    <canvas canvas-id="dakaCanvas" style='height:100px; width:100%'/>
+ 
+
+  <view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">打卡记录</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">活动详情</view>  
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">小组成员</view>  
+</view>  
+  
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+   
+    <swiper-item>  
+      <view>打卡记录</view>  
+    </swiper-item>   
+    <swiper-item>  
+      <view>活动详情</view>  
+    </swiper-item>    
+    <swiper-item>  
+      <view>小组成员</view>  
+    </swiper-item>  
+</swiper>
+
+</view>

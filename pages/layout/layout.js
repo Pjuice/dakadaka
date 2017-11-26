@@ -99,11 +99,16 @@ Page({
   onShareAppMessage: function () {
     
   },
-
+  toDetail: function () {
+    console.log('点击了 one daka');
+    wx.navigateTo({
+      url: '../daka_info/daka_info',
+    })
+  },
   addNewDK: function(){
     console.log('点击了');
     wx.navigateTo({
-      url: '../create_group/create_group',
+      url: '../logs/logs',
     })
   },
   getUserInfo: function (e) {

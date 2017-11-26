@@ -25,9 +25,10 @@
   </view>
   
   <scroll-view class='BigCard' scroll-y  >
-    <view class='card' bindtap="addNewDK">
+
+      <view class='card' bindtap="toDetail">
       <view>
-        <image src='/pic/pic.jpg' class='habitpic'></image>
+        <image src='/image/pic/pic.jpg' class='habitpic'></image>
       </view>
       <view>
         <text class='habitname'decode='{{true}}' space='{{true}}'>&nbsp;&nbsp;&nbsp;写字\n</text>
@@ -37,8 +38,8 @@
       
     </view>
 
-    <view class='card' bindtap="addNewDK">
-      <view><image src='/pic/pic.jpg' class='habitpic'></image> </view>
+    <view class='card' bindtap="toDetail">
+      <view><image src='/image/pic/pic.jpg' class='habitpic'></image> </view>
       <view >
       <text class='habitname' decode='{{true}}' space='{{true}}'>&nbsp;&nbsp;&nbsp;跑步\n</text>
       <text class='timetext' decode='{{true}}' space='{{true}}' >&nbsp;&nbsp;时间：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20：00</text>
@@ -46,8 +47,8 @@
       <view><button class='dkbutton' size='mini'>打卡2</button></view>
     </view>
 
-    <view class='card' bindtap="addNewDK">
-      <view><image src='/pic/pic.jpg' class='habitpic'></image> </view>
+    <view class='card' bindtap="toDetail">
+      <view><image src='/image/pic/pic.jpg' class='habitpic'></image> </view>
       <view >
       <text class='habitname' decode='{{true}}' space='{{true}}'>&nbsp;&nbsp;&nbsp;跑步\n</text>
       <text class='timetext' decode='{{true}}' space='{{true}}' >&nbsp;&nbsp;时间：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20：00</text>
@@ -55,8 +56,8 @@
       <view><button class='dkbutton' size='mini'>打卡3</button></view>
     </view>
 
-    <view class='card' bindtap="addNewDK">
-      <view><image src='/pic/pic.jpg' class='habitpic'></image> </view>
+    <view class='card' bindtap="toDetail">
+      <view><image src='/image/pic/pic.jpg' class='habitpic'></image> </view>
       <view >
       <text class='habitname' decode='{{true}}' space='{{true}}'>&nbsp;&nbsp;&nbsp;跑步\n</text>
       <text class='timetext' decode='{{true}}' space='{{true}}' >&nbsp;&nbsp;时间：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20：00</text>
@@ -64,23 +65,7 @@
       <view><button class='dkbutton' size='mini'>打卡4</button></view>
     </view>
 
-    <view class='card' bindtap="addNewDK">
-      <view><image src='/pic/pic.jpg' class='habitpic'></image> </view>
-      <view >
-      <text class='habitname' decode='{{true}}' space='{{true}}'>&nbsp;&nbsp;&nbsp;跑步\n</text>
-      <text class='timetext' decode='{{true}}' space='{{true}}' >&nbsp;&nbsp;时间：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20：00</text>
-      </view>
-      <view><button class='dkbutton' size='mini'>打卡3</button></view>
-    </view>
-
-    <view class='card' bindtap="addNewDK">
-      <view><image src='/pic/pic.jpg' class='habitpic'></image> </view>
-      <view >
-      <text class='habitname' decode='{{true}}' space='{{true}}'>&nbsp;&nbsp;&nbsp;跑步\n</text>
-      <text class='timetext' decode='{{true}}' space='{{true}}' >&nbsp;&nbsp;时间：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20：00</text>
-      </view>
-      <view><button class='dkbutton' size='mini'>打卡4</button></view>
-    </view>
+    
   </scroll-view>
 
   <text bindtap="addNewDK" style="color:blue">

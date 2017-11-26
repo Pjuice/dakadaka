@@ -1,0 +1,43 @@
+/* pages/daka_info/daka_info.wxss */
+.page_{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFF
+}
+.group{
+  width: 100%;
+  height: 180rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0F;  
+}
+.do_daka{
+  width: 100%;
+  
+  display: flex;
+  flex-basis: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* keep this */
+.swiper-tab{  
+    width: 100%;  
+    border-bottom: 2rpx solid #20B2AA;  
+    text-align: center;  
+    line-height: 80rpx;}  
+.swiper-tab-list{  font-size: 40rpx;  
+    display: inline-block;  
+    width: 33.33%;  
+    color: #20B2AA;  
+}  
+.on{ color: #20B2AA;  
+    border-bottom: 5rpx solid #20B2AA;}  
+  
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }  
+.swiper-box view{  
+    text-align: center;  
+}

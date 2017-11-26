@@ -34,7 +34,7 @@
   justify-content: space-between; /*主轴上的对齐方式*/
   align-items: center;  /*交叉轴对齐方式*/
   /* background-color: #f00;    */
-  background-image: url('../../pic/pic.jpg');
+  /* background-image: url('../image/pic/pic.jpg'); */
 } 
 
 /* .card{
