@@ -13,7 +13,7 @@
     <progress percent="{{continue_days*100/5}}" stroke-width="10" show-info active />
     <!-- 圆形按钮 -->
     <!-- <view><button size='mini' type="default" plain='True'> 打卡 </button></view> -->
-    <canvas canvas-id="dakaCanvas" style='height:100px; width:100%'/>
+    <canvas animation="{{animationData}}" canvas-id="dakaCanvas" style='height:100px; width:100%' bindtap='click_daka'/>
  
 
   <view class="swiper-tab">  

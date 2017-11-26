@@ -10,10 +10,28 @@ Page({
     myGroup: "学英语",
     continue_days: 1,
     tabs:["打卡记录","活动详情","小组成员"],
+    daka_word: "打卡",  //打卡文字内容，未实现
     winWidth:0,
     winHeight:0,
     //tab
     currentTab:0,
+    animationData: [],
+  },
+
+  click_daka: function (){
+    //设置点击动画
+    var animation = wx.createAnimation({
+      duration: 300,  //动画时间
+      timingFunction: "ease",
+      delay: 0,
+      transformOrigin: "50% 50% 0",
+    })
+
+    animation.rotate(720).scale(0.1).step()
+    animation.rotate(0).scale(1).step()
+
+    this.setData({ animationData: animation.export() })
+    // this.setData({ daka_word:"已打卡"}) //打卡文字内容，未实现
   },
 
   /**
@@ -65,15 +83,23 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    try { //获取页面宽度width
+      var res = wx.getSystemInfoSync()
+      var width = res.windowWidth;
+    } catch (e) {
+      // Do something when catch error
+      var width = 320;
+    }
+
     // 页面渲染完成  
     const ctx = wx.createCanvasContext('dakaCanvas')
     
-    ctx.arc(160, 50, 40, 0, 2 * Math.PI, true);
+    ctx.arc(width/2, 50, 40, 0, 2 * Math.PI, true);
     ctx.setFillStyle("#20B2AA");
     ctx.fill();
     
     ctx.beginPath();
-    ctx.arc(160, 50, 45, 0, 2 * Math.PI, true);
+    ctx.arc(width/2, 50, 45, 0, 2 * Math.PI, true);
     ctx.setStrokeStyle("#20B2AA");
     ctx.stroke();
 
@@ -81,7 +107,7 @@ Page({
     ctx.setFillStyle("#ffffff"); //设置文字颜色
     ctx.setFontSize(20);
     ctx.setTextAlign('center'); ctx.setFontSize(20)
-    ctx.fillText("打卡", 158, 58,true);  //文字位置
+    ctx.fillText("打卡", width / 2, 58,true);  //文字位置
     ctx.stroke();
 
     ctx.draw();
