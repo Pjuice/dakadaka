@@ -78,10 +78,10 @@ Page({
     ctx.stroke();
 
     ctx.beginPath();
-    ctx.setStrokeStyle("#f00078"); //这里文字颜色变不过来了，待修改
+    ctx.setFillStyle("#ffffff"); //设置文字颜色
     ctx.setFontSize(20);
     ctx.setTextAlign('center'); ctx.setFontSize(20)
-    ctx.fillText("打卡", 100, 50,true);  //文字位置，待修改
+    ctx.fillText("打卡", 158, 58,true);  //文字位置
     ctx.stroke();
 
     ctx.draw();
