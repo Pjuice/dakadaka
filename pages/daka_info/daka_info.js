@@ -8,7 +8,7 @@ Page({
    */
   data: {
     myGroup: "学英语",
-    continue_days: 1,
+    continue_days:1,
     tabs:["打卡记录","活动详情","小组成员"],
     daka_word: "打卡",  //打卡文字内容
     winWidth:0,
@@ -17,6 +17,7 @@ Page({
     currentTab:0,
     animationData: [],
     //color
+    color0: "#20B2AA",  //主题色青色
     color1: "#20B2AA",
     color2: "#ffffff",
   },
@@ -39,7 +40,10 @@ Page({
     this.setData({ daka_word:"已打卡"}) //打卡文字内容
     this.setData({ color1: "#ffffff", color2: "#20B2AA" })
     this.draw();  //重新绘制
-    this.data.continue_days ++ ;
+    this.setData({ continue_days: this.data.continue_days+1});
+    wx.switchTab({
+      url: "./daka_info"
+    });
   },
 
   /**
