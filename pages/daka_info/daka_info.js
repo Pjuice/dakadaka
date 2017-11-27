@@ -20,6 +20,7 @@ Page({
     color0: "#20B2AA",  //主题色青色
     color1: "#20B2AA",
     color2: "#ffffff",
+    is_daka: false, //判断是否已经打卡，避免重复打卡
   },
 
   click_daka: function (){
@@ -40,10 +41,13 @@ Page({
     this.setData({ daka_word:"已打卡"}) //打卡文字内容
     this.setData({ color1: "#ffffff", color2: "#20B2AA" })
     this.draw();  //重新绘制
-    this.setData({ continue_days: this.data.continue_days+1});
-    wx.switchTab({
-      url: "./daka_info"
-    });
+    if (this.data.is_daka == false){  //检查是否已经打卡
+      this.setData({ continue_days: this.data.continue_days+1});
+      this.setData({ is_daka: true }) 
+      wx.switchTab({  //刷新当前页面
+        url: "./daka_info"
+      });
+    }
   },
 
   /**
