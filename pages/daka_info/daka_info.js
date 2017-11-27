@@ -10,12 +10,15 @@ Page({
     myGroup: "学英语",
     continue_days: 1,
     tabs:["打卡记录","活动详情","小组成员"],
-    daka_word: "打卡",  //打卡文字内容，未实现
+    daka_word: "打卡",  //打卡文字内容
     winWidth:0,
     winHeight:0,
     //tab
     currentTab:0,
     animationData: [],
+    //color
+    color1: "#20B2AA",
+    color2: "#ffffff",
   },
 
   click_daka: function (){
@@ -31,7 +34,12 @@ Page({
     animation.rotate(0).scale(1).step()
 
     this.setData({ animationData: animation.export() })
-    // this.setData({ daka_word:"已打卡"}) //打卡文字内容，未实现
+
+
+    this.setData({ daka_word:"已打卡"}) //打卡文字内容
+    this.setData({ color1: "#ffffff", color2: "#20B2AA" })
+    this.draw();  //重新绘制
+    this.data.continue_days ++ ;
   },
 
   /**
@@ -83,6 +91,10 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+      this.draw();
+  },
+
+  draw :function(){
     try { //获取页面宽度width
       var res = wx.getSystemInfoSync()
       var width = res.windowWidth;
@@ -93,21 +105,26 @@ Page({
 
     // 页面渲染完成  
     const ctx = wx.createCanvasContext('dakaCanvas')
-    
-    ctx.arc(width/2, 50, 40, 0, 2 * Math.PI, true);
-    ctx.setFillStyle("#20B2AA");
+
+    ctx.arc(width / 2, 50, 42, 0, 2 * Math.PI, true);   //外面大实心圆
+    ctx.setFillStyle(this.data.color2);
     ctx.fill();
-    
-    ctx.beginPath();
-    ctx.arc(width/2, 50, 45, 0, 2 * Math.PI, true);
-    ctx.setStrokeStyle("#20B2AA");
+
+    ctx.beginPath();  //内层实心圆，覆盖上面
+    ctx.arc(width / 2, 50, 40, 0, 2 * Math.PI, true);
+    ctx.setFillStyle(this.data.color1);
+    ctx.fill();
+
+    ctx.beginPath();  //最外框
+    ctx.arc(width / 2, 50, 45, 0, 2 * Math.PI, true);
+    ctx.setStrokeStyle(this.data.color1);
     ctx.stroke();
 
     ctx.beginPath();
-    ctx.setFillStyle("#ffffff"); //设置文字颜色
+    ctx.setFillStyle(this.data.color2); //设置文字颜色
     ctx.setFontSize(20);
     ctx.setTextAlign('center'); ctx.setFontSize(20)
-    ctx.fillText("打卡", width / 2, 58,true);  //文字位置
+    ctx.fillText(this.data.daka_word, width / 2, 58, true);  //文字位置
     ctx.stroke();
 
     ctx.draw();
