@@ -108,7 +108,7 @@ Page({
   addNewDK: function(){
     console.log('点击了');
     wx.navigateTo({
-      url: '../logs/logs',
+      url: '../create_group/create_group',
     })
   },
   getUserInfo: function (e) {
