@@ -4,7 +4,8 @@
     "pages/me/me",
     "pages/create_group/create_group",
     "pages/layout/layout",
-    "pages/daka_info/daka_info"
+    "pages/daka_info/daka_info",
+    "pages/person_info/person_info"
   ],
   "tabBar": {
     "color": "#8a8a8a",

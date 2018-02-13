@@ -1,0 +1,23 @@
+<!--pages/person_info/person_info.wxml-->
+<view class='info'>
+    <view class="piece">
+        <view>头像</view>
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+
+    <view class="piece">
+        <view>名字</view>
+        <view>{{userInfo.nickName}}</view>
+    </view>
+
+    <view class="piece">
+        <view>性别</view>
+        <view>{{sex}}</view>
+    </view>
+
+    <view class="piece">
+        <view>个性签名</view>
+        <input style="width:215rpx" placeholder="这个人很懒..."></input>
+    </view>
+    
+</view>
