@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/me/me",
     "pages/create_group/create_group",
+    "pages/find/find",
     "pages/layout/layout",
     "pages/daka_info/daka_info",
     "pages/person_info/person_info"
@@ -21,7 +22,7 @@
         "selectedIconPath": "image/icon/index_selected.png"
       },
       {
-        "pagePath": "pages/layout/layout",
+        "pagePath": "pages/find/find",
         "text": "发现",
         "iconPath": "image/icon/find.png",
         "selectedIconPath": "image/icon/find_selected.png"
