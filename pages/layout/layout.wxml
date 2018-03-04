@@ -6,7 +6,7 @@
 
   <view class="userinfo" style="background-image: url('http://mpic.tiankong.com/3ef/629/3ef62948d42ead26ba10f4f6b21dea98/640.jpg');background-repeat:round">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
+    <block wx:else> 
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
@@ -14,11 +14,22 @@
   <!-- <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view> -->
+  <canvas class = "canvas-button1" canvas-id='arrow-button' bindtap='addNewDK'></canvas>
+
+      <view class="search_view">
+      <form class="search__form" bindsubmit="searchSubmit">
+        <icon class="search_icon" size='20' type='search'></icon> 
+        <input  placeholder="输入ID或关键字，加入打卡" value ="{{search_value}}"  />
+      </form>
+      </view>
+
+  <view class="line"></view>
+  <view class='left' >
+    <text style="color:gray" font-size="small" >今日任务</text>
+  </view>
 
 
-  <text>\n</text>
-  <button size="mini" bindtap="addNewDK" class='btn'>+ 创建一个新的打卡</button>
-   <text>\n</text>
+  <view class="line"></view>
 
   <view class='left'>
     <text style="color:gray" font-size="small">我管理的打卡</text>
