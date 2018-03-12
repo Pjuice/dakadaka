@@ -1,10 +1,76 @@
 <!--index.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+<view class="con">
+   <!-- <view class="bgp">
+     <image style="height: 350rpx; background-color: #eeeeee;" mode="scaleToFill" src="{{src}}"></image> 
+  </view>    -->
+
+  <canvas class = "canvas-button1" canvas-id='arrow-button' bindtap='addNewDK'></canvas>
+
+      <view class="search_view">
+      <form class="search__form" bindsubmit="searchSubmit">
+        <icon class="search_icon" size='20' type='search'></icon> 
+        <input  placeholder="输入ID或关键字，加入打卡" value ="{{search_value}}"  />
+      </form>
+      </view>
+
+  <view class="line"></view>
+  <view class='left' >
+    <text style="color:gray" font-size="small" >今日任务</text>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+
+
+  <view class="line"></view>
+
+  <view class='left'>
+    <text style="color:gray" font-size="small">我管理的打卡</text>
   </view>
+  
+  <scroll-view class='BigCard' scroll-y  >
+
+      <view class='card' bindtap="toDetail">
+      <view>
+        <image src='/image/pic/pic.jpg' class='habitpic'></image>
+      </view>
+      <view>
+        <text class='habitname'decode='{{true}}' space='{{true}}'>&nbsp;&nbsp;&nbsp;写字\n</text>
+        <text class='timetext' decode='{{true}}' space='{{true}}'>&nbsp;&nbsp;时间：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20：00</text>
+      </view>
+      <view><button class='dkbutton' size='mini'>打卡1</button></view>
+      
+    </view>
+
+    <view class='card' bindtap="toDetail">
+      <view><image src='/image/pic/pic.jpg' class='habitpic'></image> </view>
+      <view >
+      <text class='habitname' decode='{{true}}' space='{{true}}'>&nbsp;&nbsp;&nbsp;跑步\n</text>
+      <text class='timetext' decode='{{true}}' space='{{true}}' >&nbsp;&nbsp;时间：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20：00</text>
+      </view>
+      <view><button class='dkbutton' size='mini'>打卡2</button></view>
+    </view>
+
+    <view class='card' bindtap="toDetail">
+      <view><image src='/image/pic/pic.jpg' class='habitpic'></image> </view>
+      <view >
+      <text class='habitname' decode='{{true}}' space='{{true}}'>&nbsp;&nbsp;&nbsp;跑步\n</text>
+      <text class='timetext' decode='{{true}}' space='{{true}}' >&nbsp;&nbsp;时间：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20：00</text>
+      </view>
+      <view><button class='dkbutton' size='mini'>打卡3</button></view>
+    </view>
+
+    <view class='card' bindtap="toDetail">
+      <view><image src='/image/pic/pic.jpg' class='habitpic'></image> </view>
+      <view >
+      <text class='habitname' decode='{{true}}' space='{{true}}'>&nbsp;&nbsp;&nbsp;跑步\n</text>
+      <text class='timetext' decode='{{true}}' space='{{true}}' >&nbsp;&nbsp;时间：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20：00</text>
+      </view>
+      <view><button class='dkbutton' size='mini'>打卡4</button></view>
+    </view>
+
+    
+  </scroll-view>
+
+  <text bindtap="addNewDK" style="color:blue">
+  更多历史打卡 > 
+  </text>
+  
 </view>
