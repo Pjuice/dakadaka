@@ -37,22 +37,6 @@
   /* background-image: url('../image/pic/pic.jpg'); */
 } 
 
-/* .card{
-  display: flex;
-  width: 95%;
-  height: 150rpx;
-  /* border: 1px solid #ddd; 
-
-  border-radius: 2%;
-  border-width: 1px;
-  border-color: #ddd;
-  border-style: solid;
-  
-  flex-direction: column;
-  justify-content: center; 
-  align-self: center;
-  background-color: #fff;
-} */
  
 .dakablock{
   flex-direction: column;
@@ -93,8 +77,10 @@
 }
  
 .btn{
+  margin-top: 30rpx;
   flex-direction: column;
   align-self: center;
+
 } 
 .habitpic{
   display: flex;
@@ -119,4 +105,39 @@
   display: flex;
   background-color:#55f;
   color: whitesmoke;
+}
+
+.search_view{
+  width : 90%;
+  height: 50rpx;
+  background-color: white;
+  border: solid 1px #000;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+.search_icon{
+  margin: 10rpx 10rpx 10rpx 10rpx;  
+  position: absolute;  
+  left:30rpx;  
+  z-index: 2;  
+  width: 20px;  
+  height: 25px;  
+  text-align: center; 
+}
+.search_view input{
+  margin-left: 55rpx;
+}
+.line{
+    width: 100%;
+    margin-bottom: 10rpx;  
+    line-height: 2px;  
+    border-bottom:  solid 2px #ddd;
+
+}
+.canvas-button1{
+  width:75%;
+  height: 90rpx;
+  margin-top: 20rpx;
+  
 }
