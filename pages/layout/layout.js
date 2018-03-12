@@ -12,7 +12,6 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    search_value: "",
   },
 
   bindViewTap: function () {
@@ -51,38 +50,12 @@ Page({
       })
     }
   },
-  canvasIdErrorCallback: function (e) {
 
-    console.error(e.detail.errMsg);
-  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function (e) {
-    var context = wx.createContext();//创建并返回绘图上下文context对象。
-    var width = wx.getSystemInfoSync().screenWidth
-
-    context.setLineWidth(1);
-    context.setLineCap("round")
-    context.setLineJoin("miter");
-    context.setMiterLimit(10);
-
-    context.moveTo(0, 0);
-    context.lineTo(width/8*5, 0);
-    context.lineTo(width/8*6, 20);
-    context.lineTo(width / 8 * 5, 40);
-    context.lineTo( 0, 40);
-    context.lineTo(0, 0);
-
-    context.setFontSize(20);
-    context.fillText("创建一个新的打卡", width/7, 28);
-    context.stroke();
-
-    wx.drawCanvas({
-      canvasId : 'arrow-button',
-      actions : context.getActions()
-    });
- 
+  onReady: function () {
+    
   },
 
   /**
@@ -132,15 +105,11 @@ Page({
       url: '../daka_info/daka_info',
     })
   },
-
   addNewDK: function(){
-    console.log('创建新打卡');
+    console.log('点击了');
     wx.navigateTo({
       url: '../create_group/create_group',
     })
-  },
-  searchSubmit: function(){
-    console.log("submit search")
   },
   getUserInfo: function (e) {
     console.log(e)
