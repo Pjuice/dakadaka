@@ -7,15 +7,17 @@ var app = getApp()
 
 Page({
   data: {
+    
     userInfo: {},
     ID:1234567,
-
+    leftchar: "<",
+    rightchar: ">",
     hasEmptyGrid: false,
     showPicker: false,
 
     dakaday: [{
         year: 2018,
-        month: 2,
+        month: 3,
         day: 4
     },{
         year: 2018,
@@ -24,7 +26,7 @@ Page({
     }, {
         year: 2018,
         month: 2,
-        day: 7
+        day: 12
     }]
   },
 
@@ -94,18 +96,29 @@ Page({
     for (let i = 1; i <= thisMonthDays; i++) {
         days.push({
             day: i,
-            choosed: false
+            choosed: false,
+            today:false
         });
     }
+    // //设置当前日期
+    const date = new Date();
+    const cur_year = date.getFullYear();
+    const cur_month = date.getMonth() + 1;
+    const cur_day = date.getDate();
 
     // 将已打卡日期标记为true
     for (var i in this.data.dakaday){
         // console.log(this.data.dakaday[0].year)
         // console.log(year)
         if (this.data.dakaday[i].year === year && this.data.dakaday[i].month === month){
-            days[this.data.dakaday[i].day-1].choosed = true
+            days[this.data.dakaday[i].day-1].choosed = true;
         }
     }
+
+    if(cur_year === year && cur_month === month){
+        days[cur_day - 1].today = true;
+    }
+
 
     this.setData({
       days
@@ -215,5 +228,11 @@ Page({
         })
         // this.handleCalendar(handle: "next" );
         // this.chooseYearAndMonth();
+    },
+
+    complaint: function(){
+        wx.navigateTo({
+            url: 'complaint/complaint'
+        })
     }
 })

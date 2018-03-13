@@ -1,0 +1,8 @@
+<!--pages/complaint/complaint.wxml-->
+<!-- <text>pages/complaint/complaint.wxml</text> -->
+<view class='container'>
+    <view class="input">
+        <input placeholder="我要申诉..." focus="{{focus}}" />
+    </view>
+    <view><button class='btn' size='mini' bindtap=''>申诉</button></view>
+</view>

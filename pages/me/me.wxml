@@ -17,9 +17,9 @@
         <view class="calendar" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
 
             <view class='line'>
-                <view bindtap="handleCalendar" data-handle="prev"> 《  </view>
+                <view bindtap="handleCalendar" data-handle="prev"> {{leftchar}} </view>
                 <view bindtap="chooseYearAndMonth">{{cur_year || "--"}} 年 {{cur_month || "--"}} 月</view>
-                <view bindtap="handleCalendar" data-handle="next">  》 </view>
+                <view bindtap="handleCalendar" data-handle="next">  {{rightchar}} </view>
             </view>
 
             <view class='line'>
@@ -29,7 +29,7 @@
             <view class="days">
                 <view class="gride" wx:if="{{hasEmptyGrid}}" wx:for="{{empytGrids}}" wx:key="{{index}}" data-idx="{{index}}"></view> 
                 <view class="grid" wx:for="{{days}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="tapDayItem">
-                    <view bindtap="gotoDetail" class="day {{item.choosed ? 'bgchoose background-color' : ''}}">{{item.day}}</view>
+                    <view bindtap="gotoDetail" class="day {{item.choosed ? 'bgchoose background-color' : (item.today ? 'bgchoose1':'')}}">{{item.day}}</view>
                 </view>
             </view>
 
@@ -48,6 +48,31 @@
                     <view class="picker-view" wx:for="{{picker_month}}" style="line-height: 50px">{{item}}月</view>
                 </picker-view-column>
             </picker-view>
+        </view>
+
+        <view class="notice">
+            <view class="text">通知</view>
+            <view><button class='complaint' size='mini' bindtap='complaint'>申诉</button></view>
+        </view>
+        
+        <view class='card' bindtap="toDetail">
+            <text class='subject' decode='{{true}}' space='{{true}}'>欢迎\n</text>
+            <text class='detail' decode='{{true}}' space='{{true}}' >亲爱的{{userInfo.nickName}},欢迎来到打卡大咖社区,这里...</text>
+        </view>
+
+         <view class='card' bindtap="toDetail">
+            <text class='subject' decode='{{true}}' space='{{true}}'>欢迎\n</text>
+            <text class='detail' decode='{{true}}' space='{{true}}' >亲爱的{{userInfo.nickName}},欢迎来到打卡大咖社区,这里...</text>
+        </view>
+        
+        <view class='card' bindtap="toDetail">
+            <text class='subject' decode='{{true}}' space='{{true}}'>欢迎\n</text>
+            <text class='detail' decode='{{true}}' space='{{true}}' >亲爱的{{userInfo.nickName}},欢迎来到打卡大咖社区,这里...</text>
+        </view>
+
+        <view class='card' bindtap="toDetail">
+            <text class='subject' decode='{{true}}' space='{{true}}'>欢迎\n</text>
+            <text class='detail' decode='{{true}}' space='{{true}}' >亲爱的{{userInfo.nickName}},欢迎来到打卡大咖社区,这里...</text>
         </view>
 
     </view>
