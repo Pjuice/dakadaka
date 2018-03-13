@@ -1,7 +1,7 @@
 .page-top {
     /* width: 1000rpx; */
     height: 150rpx;
-    background-color: #4169e1;
+    /* background-color: #4169e1; */
     padding: 70rpx 0;
 }
 
@@ -124,7 +124,7 @@
     left: 0;
     top: 0;
     /* color: #416e1; */
-    background-color: #4169e1;   
+    /* background-color: #4169e1;     */
 }
 
 .picker{

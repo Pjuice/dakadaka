@@ -12,7 +12,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f0F;  
+  background-color: #4169e1;  
 }
 .do_daka{
   width: 100%;
@@ -26,16 +26,16 @@
 /* keep this */
 .swiper-tab{  
     width: 100%;  
-    border-bottom: 2rpx solid #20B2AA;  
+    border-bottom: 2rpx solid #4169e1;  
     text-align: center;  
     line-height: 80rpx;}  
 .swiper-tab-list{  font-size: 40rpx;  
     display: inline-block;  
     width: 33.33%;  
-    color: #20B2AA;  
+    color: #4169e1;  
 }  
-.on{ color: #20B2AA;  
-    border-bottom: 5rpx solid #20B2AA;}  
+.on{ color: #4169e1;  
+    border-bottom: 5rpx solid #4169e1;}  
   
 .swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }  
 .swiper-box view{  

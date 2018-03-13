@@ -1,6 +1,6 @@
 
 <view>
-    <view class="page-top">
+    <view class="page-top background-color">
          <view class="userinfo">
             <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
             <view class="userinfo-nickname">
@@ -29,7 +29,7 @@
             <view class="days">
                 <view class="gride" wx:if="{{hasEmptyGrid}}" wx:for="{{empytGrids}}" wx:key="{{index}}" data-idx="{{index}}"></view> 
                 <view class="grid" wx:for="{{days}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="tapDayItem">
-                    <view bindtap="gotoDetail" class="day {{item.choosed ? 'bgchoose' : ''}}">{{item.day}}</view>
+                    <view bindtap="gotoDetail" class="day {{item.choosed ? 'bgchoose background-color' : ''}}">{{item.day}}</view>
                 </view>
             </view>
 
