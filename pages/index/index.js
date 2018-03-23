@@ -126,10 +126,11 @@ Page({
   onShareAppMessage: function () {
     
   },
-  toDetail: function () {
+  toJudge: function () {
     console.log('点击了 one daka');
     wx.navigateTo({
-      url: '../daka_info/daka_info',
+      url: './judge/judge',
+        // url: './mylog/mylog'
     })
   },
 

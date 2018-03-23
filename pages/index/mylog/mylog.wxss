@@ -1,0 +1,46 @@
+/* pages/index/mylog/mylog.wxss */
+
+.input{
+    width: 90%;
+    height: 200rpx;
+    margin: 20rpx;
+    
+    border: 1rpx dashed #ddd;
+}
+.btn{
+    /* display: flex; */
+    background-color:#4169e1;
+    color: whitesmoke;
+}
+
+/*画廊*/
+.gallery {
+    /*margin-bottom: 100rpx;*/
+    /* width: 90%; */
+    margin: 30rpx; 
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+/*每张图片所占容器*/
+.item {
+    position: relative;
+    margin: 5px;
+}
+
+/*删除按钮*/
+.delete {
+    position: absolute;
+    height: 20px;
+    bottom: 0;
+    width: 100%;
+    background: #ccc;
+    opacity: .8;
+}
+
+.delete image {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}

@@ -23,7 +23,7 @@ Page({
     is_daka: false, //判断是否已经打卡，避免重复打卡
   },
 
-  click_daka: function (){
+  click_daka: function (){ 
     //设置点击动画
     var animation = wx.createAnimation({
       duration: 300,  //动画时间
@@ -77,6 +77,9 @@ Page({
         });
       },
     });
+   
+    this.click_daka();
+
   },
   //change tabs hua dong
   bindChange:function(e){

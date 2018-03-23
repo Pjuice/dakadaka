@@ -27,7 +27,7 @@
   
   <scroll-view class='BigCard' scroll-y  >
 
-      <view class='card' bindtap="toDetail">
+      <view class='card' bindtap="toJudge">
       <view>
         <image src='/image/pic/pic.jpg' class='habitpic'></image>
       </view>
@@ -39,7 +39,7 @@
       
     </view>
 
-    <view class='card' bindtap="toDetail">
+    <view class='card' bindtap="toJudge">
       <view><image src='/image/pic/pic.jpg' class='habitpic'></image> </view>
       <view >
       <text class='habitname' decode='{{true}}' space='{{true}}'>&nbsp;&nbsp;&nbsp;跑步\n</text>
@@ -48,7 +48,7 @@
       <view><button class='dkbutton' size='mini'>打卡2</button></view>
     </view>
 
-    <view class='card' bindtap="toDetail">
+    <view class='card' bindtap="toJudge">
       <view><image src='/image/pic/pic.jpg' class='habitpic'></image> </view>
       <view >
       <text class='habitname' decode='{{true}}' space='{{true}}'>&nbsp;&nbsp;&nbsp;跑步\n</text>
@@ -57,7 +57,7 @@
       <view><button class='dkbutton' size='mini'>打卡3</button></view>
     </view>
 
-    <view class='card' bindtap="toDetail">
+    <view class='card' bindtap="toJudge">
       <view><image src='/image/pic/pic.jpg' class='habitpic'></image> </view>
       <view >
       <text class='habitname' decode='{{true}}' space='{{true}}'>&nbsp;&nbsp;&nbsp;跑步\n</text>

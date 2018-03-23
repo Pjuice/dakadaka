@@ -7,7 +7,9 @@
         "pages/layout/layout",
         "pages/daka_info/daka_info",
         "pages/person_info/person_info",
-        "pages/me/complaint/complaint"
+        "pages/me/complaint/complaint",
+        "pages/index/judge/judge",
+        "pages/index/mylog/mylog"
     ],
     "tabBar": {
         "color": "#8a8a8a",

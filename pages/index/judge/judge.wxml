@@ -1,0 +1,55 @@
+<!--pages/index/Judge/judge.wxml-->
+<!-- <text>pages/index/Judge/judge.wxml</text> -->
+
+<view class='con'>
+    <view class="page-top">
+        <view class="userinfo">
+            <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+            <view class="userinfo-text">
+                <text>{{userInfo.nickName}}</text>
+                <text>{{group}}</text>
+                <text>{{time}}</text>
+            </view>
+            <!-- <image bindtap="bindViewTap" class="set_icon" src="../../image/icon/set.png" background-size="cover"></image> -->
+        </view>
+    </view>
+    
+    <view class="line"></view>
+
+    <view class='daka-info'>
+        <view class='daka-text'>
+          <text class='text'> {{dakatext}} </text>
+        </view>
+        <!-- <view class='daka-pic'  wx:for="{{dakapic}}" wx:for-item="item">
+            <view  class='every_pic'><image src='{{item}}' mode='aspectFit'></image></view>
+        </view> -->
+        <view class="daka-pic">
+            <view class="item" wx:for="{{images}}" wx:key="">
+                <image style="width: {{imageWidth}}px; height: {{imageWidth}}px" src=" {{item}}" bindtap="previewImage" mode="aspectFill" />
+                <!-- 删除按钮 -->
+                <!-- <view class="delete" bindtap="delete" data-index="{{index}}">
+                    <image style="left: {{imageWidth / 2 - 10}}px;" src="/images/icon_delete.png" />
+                </view> -->
+            </view>
+            <!-- <view class="item">
+                <image style="width: {{imageWidth}}px; height: {{imageWidth}}px" src="/images/icon_add.png" class="button-upload" bindtap="chooseImage" />
+            </view> -->
+        </view>
+    </view>
+
+    <view class="line"></view>
+
+    <view class='botom'>
+        <view>
+            <button size="mini" bindtap="submit" class='btn'>Yes</button>
+        </view>
+
+        <view>
+            <text class='text'>{{n}}/{{all_people}}</text>
+        </view>
+
+        <view>
+            <button size="mini" bindtap="submit" class='btn'>No</button>
+        </view>
+    </view>
+</view>

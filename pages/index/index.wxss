@@ -133,7 +133,6 @@
     margin-bottom: 10rpx;  
     line-height: 2px;  
     border-bottom:  solid 2px #ddd;
-
 }
 .canvas-button1{
   width:75%;

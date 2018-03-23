@@ -1,0 +1,12 @@
+/* pages/complaint/complaint.wxss */
+.input{
+    width: 90%;
+    height: 400rpx;
+    margin: 20rpx;
+    border: 1rpx dashed #4169e1;
+}
+.btn{
+    /* display: flex; */
+    background-color:#55f;
+    color: whitesmoke;
+}

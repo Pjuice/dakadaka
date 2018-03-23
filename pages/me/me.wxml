@@ -1,15 +1,13 @@
-
 <view>
     <view class="page-top background-color">
-         <view class="userinfo">
+        <view class="userinfo">
             <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
             <view class="userinfo-nickname">
-               <text>{{userInfo.nickName}}</text> 
-              <text>ID:{{ID}}</text> 
+                <text>{{userInfo.nickName}}</text>
+                <text>ID:{{ID}}</text>
             </view>
-            <image bindtap="bindViewTap" class="set_icon" src="../../image/icon/set.png" background-size="cover"></image>  
+            <image bindtap="bindViewTap" class="set_icon" src="../../image/icon/set.png" background-size="cover"></image>
         </view>
-        
     </view>
 
     <view class="page-body">
@@ -19,7 +17,7 @@
             <view class='line'>
                 <view bindtap="handleCalendar" data-handle="prev"> {{leftchar}} </view>
                 <view bindtap="chooseYearAndMonth">{{cur_year || "--"}} 年 {{cur_month || "--"}} 月</view>
-                <view bindtap="handleCalendar" data-handle="next">  {{rightchar}} </view>
+                <view bindtap="handleCalendar" data-handle="next"> {{rightchar}} </view>
             </view>
 
             <view class='line'>
@@ -27,7 +25,7 @@
             </view>
 
             <view class="days">
-                <view class="gride" wx:if="{{hasEmptyGrid}}" wx:for="{{empytGrids}}" wx:key="{{index}}" data-idx="{{index}}"></view> 
+                <view class="gride" wx:if="{{hasEmptyGrid}}" wx:for="{{empytGrids}}" wx:key="{{index}}" data-idx="{{index}}"></view>
                 <view class="grid" wx:for="{{days}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="tapDayItem">
                     <view bindtap="gotoDetail" class="day {{item.choosed ? 'bgchoose background-color' : (item.today ? 'bgchoose1':'')}}">{{item.day}}</view>
                 </view>
@@ -52,27 +50,19 @@
 
         <view class="notice">
             <view class="text">通知</view>
-            <view><button class='complaint' size='mini' bindtap='complaint'>申诉</button></view>
-        </view>
-        
-        <view class='card' bindtap="toDetail">
-            <text class='subject' decode='{{true}}' space='{{true}}'>欢迎\n</text>
-            <text class='detail' decode='{{true}}' space='{{true}}' >亲爱的{{userInfo.nickName}},欢迎来到打卡大咖社区,这里...</text>
+            <view>
+                <button class='complaint' size='mini' bindtap='complaint'>申诉</button>
+            </view>
         </view>
 
-         <view class='card' bindtap="toDetail">
-            <text class='subject' decode='{{true}}' space='{{true}}'>欢迎\n</text>
-            <text class='detail' decode='{{true}}' space='{{true}}' >亲爱的{{userInfo.nickName}},欢迎来到打卡大咖社区,这里...</text>
-        </view>
-        
         <view class='card' bindtap="toDetail">
-            <text class='subject' decode='{{true}}' space='{{true}}'>欢迎\n</text>
-            <text class='detail' decode='{{true}}' space='{{true}}' >亲爱的{{userInfo.nickName}},欢迎来到打卡大咖社区,这里...</text>
+            <text class='subject' decode='{{true}}' space='{{true}}'>来打卡吧\n</text>
+            <text class='detail' decode='{{true}}' space='{{true}}'>亲爱的{{userInfo.nickName}},恭喜你完成第一次打卡...</text>
         </view>
 
         <view class='card' bindtap="toDetail">
             <text class='subject' decode='{{true}}' space='{{true}}'>欢迎\n</text>
-            <text class='detail' decode='{{true}}' space='{{true}}' >亲爱的{{userInfo.nickName}},欢迎来到打卡大咖社区,这里...</text>
+            <text class='detail' decode='{{true}}' space='{{true}}'>亲爱的{{userInfo.nickName}},欢迎来到打卡大咖社区,这里...</text>
         </view>
 
     </view>
