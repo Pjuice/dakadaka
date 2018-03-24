@@ -35,7 +35,7 @@
   
   <scroll-view class='BigCard' scroll-y  >
 
-      <view class='card' bindtap="toDetail">
+      <view class='card' bindtap="joining">
       <view>
         <image src='/image/pic/pic.jpg' class='habitpic'></image>
       </view>
@@ -47,7 +47,7 @@
       
     </view>
 
-    <view class='card' bindtap="toDetail">
+    <view class='card' bindtap="joining">
       <view><image src='/image/pic/pic.jpg' class='habitpic'></image> </view>
       <view >
       <text class='habitname' decode='{{true}}' space='{{true}}'>跑步\n</text>
@@ -56,7 +56,7 @@
       <view><button class='dkbutton' size='mini'>加入</button></view>
     </view>
 
-    <view class='card' bindtap="toDetail">
+    <view class='card' bindtap="joining">
       <view><image src='/image/pic/pic.jpg' class='habitpic'></image> </view>
       <view >
       <text class='habitname' decode='{{true}}' space='{{true}}'>单词\n</text>
@@ -65,7 +65,7 @@
       <view><button class='dkbutton' size='mini'>加入</button></view>
     </view>
 
-    <view class='card' bindtap="toDetail">
+    <view class='card' bindtap="joining">
       <view><image src='/image/pic/pic.jpg' class='habitpic'></image> </view>
       <view >
       <text class='habitname' decode='{{true}}' space='{{true}}'>早起\n</text>

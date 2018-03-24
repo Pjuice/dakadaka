@@ -13,16 +13,16 @@
       </form>
       </view>
 
-  <view class="line"></view>
+  <!-- <view class="line"></view>
   <view class='left' >
     <text style="color:gray" font-size="small" >今日任务</text>
-  </view>
+  </view> -->
 
 
   <view class="line"></view>
 
   <view class='left'>
-    <text style="color:gray" font-size="small">我管理的打卡</text>
+    <text style="color:gray" font-size="small" >我加入的打卡</text>
   </view>
   
   <scroll-view class='BigCard' scroll-y  >
@@ -69,7 +69,7 @@
     
   </scroll-view>
 
-  <text bindtap="addNewDK" style="color:blue">
+  <text bindtap="gotoDetail" style="color:blue">
   更多历史打卡 > 
   </text>
   

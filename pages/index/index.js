@@ -140,6 +140,11 @@ Page({
       url: '../create_group/create_group',
     })
   },
+  gotoDetail: function () {
+    wx.navigateTo({
+      url: '../daka_info/daka_info'
+    })
+  },
   searchSubmit: function(){
     console.log("submit search")
   },

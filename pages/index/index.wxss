@@ -49,6 +49,7 @@
   flex-direction: column;/*主轴方向*/
   justify-content: space-between; /*主轴上的对齐方式*/
   align-items: flex-start;  /*交叉轴对齐方式*/
+  margin-left: 80rpx;
 }
 
 .BigCard{

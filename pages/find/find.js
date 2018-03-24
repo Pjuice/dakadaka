@@ -117,6 +117,12 @@ Page({
       url: '../daka_info/daka_info',
     })
   },
+  joining: function () {
+    console.log('跳转至加入小组界面');
+    wx.navigateTo({
+      url: '../join_group/join_group',
+    })
+  },
   addNewDK: function(){
     console.log('点击了');
     wx.navigateTo({
