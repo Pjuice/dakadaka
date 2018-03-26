@@ -10,7 +10,6 @@
                 <text>{{group}}</text>
                 <text>{{time}}</text>
             </view>
-            <!-- <image bindtap="bindViewTap" class="set_icon" src="../../image/icon/set.png" background-size="cover"></image> -->
         </view>
     </view>
     

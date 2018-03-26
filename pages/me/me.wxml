@@ -4,7 +4,7 @@
             <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
             <view class="userinfo-nickname">
                 <text>{{userInfo.nickName}}</text>
-                <text>ID:{{ID}}</text>
+                <text style="width:500rpx; ">ID: {{ID}}</text>
             </view>
             <image bindtap="bindViewTap" class="set_icon" src="../../image/icon/set.png" background-size="cover"></image>
         </view>
@@ -33,10 +33,14 @@
 
         </view>
 
-        <view wx:if="{{showPicker}}" class="box box-tb">
+        <view wx:if="{{showPicker}}">
             <view class="picker">
-                <view class="picker-btn picker-cancel" data-type="cancel" bindtap="tapPickerBtn">取消</view>
-                <view class="picker-btn picker-confirm" data-type="confirm" bindtap="tapPickerBtn">确定</view>
+                <view class="picker-btn picker-cancel" data-type="cancel" bindtap="tapPickerBtn">
+                    <button size='mini' style="margin-left:120rpx;">取消</button>
+                </view>
+                <view class="picker-btn picker-confirm" data-type="confirm" bindtap="tapPickerBtn">
+                    <button class='complaint' size='mini' style="margin-left:235rpx;">确定</button>
+                </view>
             </view>
             <picker-view indicator-style="height: 50px;" style="width: 100%; height: 150px;" value="{{picker_value}}" bindchange="pickerChange">
                 <picker-view-column>
@@ -46,6 +50,7 @@
                     <view class="picker-view" wx:for="{{picker_month}}" style="line-height: 50px">{{item}}月</view>
                 </picker-view-column>
             </picker-view>
+            <view style="height:200rpx;"></view>
         </view>
 
         <view class="notice">

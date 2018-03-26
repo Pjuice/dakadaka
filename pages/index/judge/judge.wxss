@@ -10,17 +10,19 @@
 .page-top {
     /* width: 1000rpx; */
     height: 120rpx;
-     /* background-color: #4121e1;  */
+    /* background-color: #4121e1;    */
     padding: 70rpx 0;
 }
 
 .userinfo {
     display: flex;
+    height: 100%;
     flex-direction: row;
     align-items: center;
-     margin-left: 10%; 
+    margin-left: 10%; 
     flex-wrap: wrap;
-    /* justify-content: space-around; */
+      /* background-color: #4121e1;     */
+    /* justify-content: space-around;  */
 }
 
 .userinfo-avatar {

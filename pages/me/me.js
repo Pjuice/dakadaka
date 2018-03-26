@@ -7,9 +7,7 @@ var app = getApp()
 
 Page({
     data: {
-
         userInfo: {},
-        ID: 1234567,
         leftchar: "<",
         rightchar: ">",
         hasEmptyGrid: false,
@@ -30,6 +28,35 @@ Page({
         }]
     },
 
+    // 获取个人信息
+    get_data: function () {
+        console.log('开始获取请求')
+        var that = this;
+        const requestTask = wx.request({
+            url: 'http://127.0.0.1:5000/info', //仅为示例，并非真实的接口地址
+            data: {
+                x: '',
+                y: ''
+            },
+            header: {
+                'content-type': 'application/json'
+            },
+            success: function (res) {
+                console.log('请求成功,数据为:')
+                console.log(res.data)
+                console.log('------------------------分割线1-----------------------')
+                console.log(res.data['info'][0]['id'])  //得到用户id
+                // var info = res.data['info'][0];
+                console.log('------------------------分割线2-----------------------')
+                that.setData({
+                    ID: res.data['info'][0]['id']
+                });
+                console.log(that.data.ID)
+                console.log('------------------------分割线3-----------------------')
+
+            }
+        })
+    },
 
     //事件处理函数
     bindViewTap: function () {
@@ -40,6 +67,8 @@ Page({
 
 
     onLoad: function () {
+        this.get_data()
+
         const date = new Date();
         const cur_year = date.getFullYear();
         const cur_month = date.getMonth() + 1;
@@ -62,6 +91,8 @@ Page({
             })
             that.update()
         })
+        console.log('-----------------last----------------')
+        console.log(this.data.id)
     },
 
     getThisMonthDays(year, month) {

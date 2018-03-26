@@ -136,9 +136,10 @@
 .picker{
     height: 80rpx;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around;  */
     border-bottom: 1rpx solid #4169e1;
-     align-items: center; 
+      /* background-color: #555 ; */
+       align-items: center;   
 }
 
 .picker-view{
