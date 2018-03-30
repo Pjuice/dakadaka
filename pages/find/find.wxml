@@ -1,10 +1,10 @@
 <!--index.wxml-->
 <view class="con">
-   <!-- <view class="bgp">
+    <!-- <view class="bgp">
      <image style="height: 350rpx; background-color: #eeeeee;" mode="scaleToFill" src="{{src}}"></image> 
   </view>    -->
 
-  <!--<view class="userinfo" style="background-image: url('http://mpic.tiankong.com/3ef/629/3ef62948d42ead26ba10f4f6b21dea98/640.jpg');background-repeat:round">
+    <!--<view class="userinfo" style="background-image: url('http://mpic.tiankong.com/3ef/629/3ef62948d42ead26ba10f4f6b21dea98/640.jpg');background-repeat:round">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
@@ -12,73 +12,49 @@
     </block>
   </view>-->
 
-  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">    
-      <block wx:for="{{slider}}" wx:for-index="index">    
-        <swiper-item>    
-          <image src="{{item.picUrl}}" class="slide-image" mode="aspectFill"/>    
-        </swiper-item>    
-      </block>    
-    </swiper> 
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+        <block wx:for="{{slider}}" wx:key="">
+            <swiper-item>
+                <image src="{{item.picUrl}}" class="slide-image" mode="aspectFill" />
+            </swiper-item>
+        </block>
+    </swiper>
 
-  <!-- <view class="usermotto">
+    <!-- <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view> -->
 
 
-  <!--<text>\n</text>
+    <!--<text>\n</text>
   <button size="mini" bindtap="addNewDK" class='btn'>+ 创建一个新的打卡</button>
    <text>\n</text>-->
 
-  <!--<view class='left'>
+    <!--<view class='left'>
     <text style="color:gray" font-size="small">我管理的打卡</text>
   </view>-->
-  
-  <scroll-view class='BigCard' scroll-y  >
 
-      <view class='card' bindtap="joining">
-      <view>
-        <image src='/image/pic/pic.jpg' class='habitpic'></image>
-      </view>
-      <view>
-        <text class='habitname' decode='{{true}}' space='{{true}}'>写字\n</text>
-        <text class='timetext' decode='{{true}}' space='{{true}}'>时间：&nbsp;20：00&nbsp;&nbsp;人数：  100</text>
-      </view>
-      <view><button class='dkbutton' size='mini'>加入</button></view>
-      
-    </view>
+    <scroll-view class='BigCard' scroll-y>
 
-    <view class='card' bindtap="joining">
-      <view><image src='/image/pic/pic.jpg' class='habitpic'></image> </view>
-      <view >
-      <text class='habitname' decode='{{true}}' space='{{true}}'>跑步\n</text>
-      <text class='timetext' decode='{{true}}' space='{{true}}' >时间：&nbsp;20：00&nbsp;&nbsp;人数：  100</text>
-      </view>
-      <view><button class='dkbutton' size='mini'>加入</button></view>
-    </view>
 
-    <view class='card' bindtap="joining">
-      <view><image src='/image/pic/pic.jpg' class='habitpic'></image> </view>
-      <view >
-      <text class='habitname' decode='{{true}}' space='{{true}}'>单词\n</text>
-      <text class='timetext' decode='{{true}}' space='{{true}}' >时间：&nbsp;20：00&nbsp;&nbsp;人数：  100</text>
-      </view>
-      <view><button class='dkbutton' size='mini'>加入</button></view>
-    </view>
+        <!-- 通过循环获取cards内容 -->
+        <view class='card' bindtap="toDetail" wx:for="{{cards}}" wx:key="cnt">
+            <view>
+                <image src='/image/pic/pic.jpg' class='habitpic'></image>
+            </view>
+            <view>
+                <text class='habitname' decode='{{true}}' space='{{true}}'>{{item.habitname}}\n</text>
+                <text class='timetext' decode='{{true}}' space='{{true}}'>时间：&nbsp;{{itme.time}}&nbsp;&nbsp;人数：  {{item.people_count}}</text>
+            </view>
+            <view>
+                <button class='dkbutton' size='mini'>加入</button>
+            </view>
+        </view>
 
-    <view class='card' bindtap="joining">
-      <view><image src='/image/pic/pic.jpg' class='habitpic'></image> </view>
-      <view >
-      <text class='habitname' decode='{{true}}' space='{{true}}'>早起\n</text>
-      <text class='timetext' decode='{{true}}' space='{{true}}' >时间：&nbsp;20：00&nbsp;&nbsp;人数：  100</text>
-      </view>
-      <view><button class='dkbutton' size='mini'>加入</button></view>
-    </view>
 
-    
-  </scroll-view>
+    </scroll-view>
 
-  <text bindtap="" style="color:blue">
+    <text bindtap="" style="color:blue">
   更多打卡小组 > 
   </text>
-  
+
 </view>

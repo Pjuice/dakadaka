@@ -13,6 +13,18 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     search_value: "",
+
+    cards:[	{'habitname':'读书',
+			'time':'19:00',
+			'cnt':1},
+			{'habitname':'背英语',
+			'time':'20:00',
+			'cnt':2},
+			{'habitname':'写字',
+			'time':'21:00',
+			'cnt':3}
+			]
+
   },
 
   bindViewTap: function () {
@@ -138,11 +150,6 @@ Page({
     console.log('创建新打卡');
     wx.navigateTo({
       url: '../create_group/create_group',
-    })
-  },
-  gotoDetail: function () {
-    wx.navigateTo({
-      url: '../daka_info/daka_info'
     })
   },
   searchSubmit: function(){

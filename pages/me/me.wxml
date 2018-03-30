@@ -60,14 +60,12 @@
             </view>
         </view>
 
-        <view class='card' bindtap="toDetail">
-            <text class='subject' decode='{{true}}' space='{{true}}'>来打卡吧\n</text>
-            <text class='detail' decode='{{true}}' space='{{true}}'>亲爱的{{userInfo.nickName}},恭喜你完成第一次打卡...</text>
-        </view>
-
-        <view class='card' bindtap="toDetail">
-            <text class='subject' decode='{{true}}' space='{{true}}'>欢迎\n</text>
-            <text class='detail' decode='{{true}}' space='{{true}}'>亲爱的{{userInfo.nickName}},欢迎来到打卡大咖社区,这里...</text>
+        <view class='card' bindtap="toDetail" wx:for="{{notices}}" wx:key="">
+            <view class='subject'>
+                <view><text style="width:200rpx">{{item.subject}}</text> </view>
+                <view><text> {{item.time}}</text></view>
+            </view>
+            <text class='detail'>{{item.detail}}</text>
         </view>
 
     </view>

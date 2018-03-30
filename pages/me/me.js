@@ -25,7 +25,20 @@ Page({
             year: 2018,
             month: 2,
             day: 12
-        }]
+        }],
+
+        notices: [
+            {
+                'subject': '来打卡吧',
+                'detail': '亲爱的xxx,恭喜你完成第一次打卡...',
+                'time':'12:30'
+            },
+            {
+                'subject': '欢迎',
+                'detail': '亲爱的xxx,欢迎来到打卡大咖社区,这里...',
+                'time': '15:32'
+            }
+        ]
     },
 
     // 获取个人信息
@@ -35,12 +48,14 @@ Page({
         const requestTask = wx.request({
             url: 'http://127.0.0.1:5000/info', //仅为示例，并非真实的接口地址
             data: {
-                x: '',
+                x: 'LY',
                 y: ''
             },
             header: {
-                'content-type': 'application/json'
+                'content-type': 'application/json'      //get方式
+                // "Content-Type": "application/x-www-form-urlencoded"   //post方式
             },
+            method: "GET",
             success: function (res) {
                 console.log('请求成功,数据为:')
                 console.log(res.data)
